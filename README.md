@@ -9,3 +9,9 @@ Install python libraries requirements
 pip install -r requirements.txt
 ```
 
+## Usage
+
+```
+python yaml2excel.py
+```
+
