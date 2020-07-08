@@ -104,7 +104,7 @@ if doc.IsFamilyDocument:
                         ext_def = parameterName2ExternalDefinition(shared_param_file, param_name)
                         if ext_def != None:
                             doc.FamilyManager.AddParameter(ext_def, BuiltInParameterGroup.PG_IDENTITY_DATA, True)
-                            print("Parameter \"{}\" added to family".format(param_name))
+                            print("Parameter \"{}\" added to family as an Instance Parameter".format(param_name))
                         else:
                             print("Parameter \"{}\" is not in the Shared Parameter File".format(param_name))
                 t.Commit()
