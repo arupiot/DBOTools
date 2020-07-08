@@ -55,7 +55,7 @@ def create_definition (group, shared_parameter_file, param_name, param_type, use
     for random_group in shared_parameter_file.Groups:
         for definition in random_group.Definitions:
             if definition.Name == param_name:
-                print("Parameter with name {} already exists in group {} a. External definition not created.".format(definition.Name, random_group.Name))
+                print("Parameter with name {} already exists in group {}. External definition not created.".format(definition.Name, random_group.Name))
                 same_name = True
 
     if same_name == False:
@@ -103,7 +103,7 @@ if doc.IsFamilyDocument:
                     else:
                         ext_def = parameterName2ExternalDefinition(shared_param_file, param_name)
                         if ext_def != None:
-                            doc.FamilyManager.AddParameter(ext_def, BuiltInParameterGroup.PG_IDENTITY_DATA, False)
+                            doc.FamilyManager.AddParameter(ext_def, BuiltInParameterGroup.PG_IDENTITY_DATA, True)
                             print("Parameter \"{}\" added to family".format(param_name))
                         else:
                             print("Parameter \"{}\" is not in the Shared Parameter File".format(param_name))

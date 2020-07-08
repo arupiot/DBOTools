@@ -1,0 +1,41 @@
+Cane:
+  GroupName: "Animal Farm"
+  BuiltinGroup: "PG_IDENTITY_DATA"
+  ParameterType: "YesNo"
+  UserModifiable: True
+  Description: "Means dog in Italian"
+
+Gatto:
+  GroupName: "Animal Farm"
+  BuiltinGroup: "PG_IDENTITY_DATA"
+  ParameterType: "YesNo"
+  UserModifiable: True
+  Description: "Means cat in Italian"
+
+Scoiattolo:
+  GroupName: "Animal Farm"
+  BuiltinGroup: "PG_IDENTITY_DATA"
+  ParameterType: "YesNo"
+  UserModifiable: True
+  Description: "Means squirrel in Italian"
+
+Mucca:
+  GroupName: "Animal Farm"
+  BuiltinGroup: "PG_IDENTITY_DATA"
+  ParameterType: "YesNo"
+  UserModifiable: True
+  Description: "Means cow in Italian"
+
+Canguro:
+  GroupName: "Animal Farm"
+  BuiltinGroup: "PG_IDENTITY_DATA"
+  ParameterType: "YesNo"
+  UserModifiable: True
+  Description: "Means kangaroo in Italian"
+
+Parasaurolophus:
+  GroupName: "Animal Farm"
+  BuiltinGroup: "PG_IDENTITY_DATA"
+  ParameterType: "YesNo"
+  UserModifiable: True
+  Description: "Means parasaurolophus in Italian"
