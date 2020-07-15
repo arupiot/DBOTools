@@ -1,4 +1,4 @@
-##Open excel file, create a list of the parameters and add them to the family as shared parameters
+# YAML TO SHARED PARAMETER FILE
 import sys
 import clr
 import System
