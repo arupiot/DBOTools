@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="92px"
+   height="92px"
+   viewBox="0 0 92 92"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Yaml2FamilyType_Icon.svg"
+   inkscape:export-filename="C:\Users\andrea.spanu\Documents\GitHub\create_revit_families\icons\Yaml2FamilyType_Icon.png"
+   inkscape:export-xdpi="100.17391"
+   inkscape:export-ydpi="100.17391">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.7826087"
+     inkscape:cx="52.435261"
+     inkscape:cy="101.57387"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="716"
+     inkscape:window-height="405"
+     inkscape:window-x="2076"
+     inkscape:window-y="156"
+     inkscape:window-maximized="0"
+     inkscape:grid-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-nodes="false"
+     inkscape:snap-text-baseline="true" />
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="20.274088"
+       y="24.414062"
+       id="text25"><tspan
+         sodipodi:role="line"
+         id="tspan23"
+         x="20.274088"
+         y="24.414062"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:Arial;-inkscape-font-specification:'Arial Italic'">YAML</tspan></text>
+    <image
+       y="34.543388"
+       x="28.556873"
+       id="image4608"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAjCAYAAAATx8MeAAAABHNCSVQICAgIfAhkiAAAA7dJREFU
+WIXNmFtIFFEYx//nnJ2d2d0eJHDNjAjKfI2I7laWZBFpBUUESRBEV+hiGkkXtSsVFUUPvkQRRAaV
+RnfIoqKXNCKIKJCkwvbBQcTEaR1PD7sz7uzc3e3yh8PunvP/zvnN+Wbmmx0iyzL+N1GX8eBfoUhT
+wG5gaGgIjDFlacVa10nmzp6Bqp1bIYoivPr37toGQRCIpUGWZVPr7u5GLBbjM+eVcVVVHRsf4nzm
+vDLe0dHhy9/Z2cmt1pZl2Tp9g4ODvGJ1JV613nc8Ykooao9exKhREazbsMWzHwDi8bi9L70jHo97
+Bqo71YhgMIi+vp++/G4ynFMa0OtnD10DT5y/DDEooPn2DV9+LzJADQwMgBCCz1++OQYVThgHUUws
+4NfvG0rLMyHWF0WqUtPg1+8LShP1sEhqKvz6RwRFqL9F/PpHBuXlyEV/6Uv1jwjKSzqCFukbEx1t
+bSbA4pJZAIAfsR842bAfgiAAQCWAq0iUs1+OUF7TUd9wBISQFD/B7uoDaGt/6xqf1JVpU6dcOVRb
+BcZYAIBqC+Vlp+objpj8BEBb+1u0Pm7xCoWSxeVQFAXhcFjV+kxQc2ZNx+q1lY4Tcc71O3hNbZ3u
+v9x4AQDw9XsMxZvOWca+aNyJ1ucvE0Dz5wKABqV7DFCCIGBV+RKULpiNw8fOeiodwUguIpEw+vp+
+omjypER/Mp3LyysM/rstzfpYqo9zbvAZoCRJQm5uLnbvq8uo9lGaKKkf3pvPLUqpPq59psuUvvUb
+t2dc+xhLLCaFIqY4xigYYwafI1SmtW/82CiA4R0QLaAopTqMp53KuPYlP7XF2tve2EAx71B6YIa1
+j1GKd9drbWNLS4od57ZEJZQ4Ng1KA0vtB4ZPZkopDhy7aPid3qyU1dqnRbHkYstWrMGtpmsoX2X+
+M3HvTpPt3FmtfRqVdv950HIT1YfP4kHLTdf5XKEyqX0JqOG0nK7f4wsIsDmnKCGODUjUvppdmw1+
+PX2MWraqg2dMfVYace07eqgaoVDI4Ndqn7ZTC8uMZeZW0zWULl0JAHj6qNl2ftva56RQKIS8vDwE
+AgGD//OnjwaoZ0/uGuJ21Bw39blCSZKEgoICRKNRxyBBECBJkv5d8/f29gIYvvrSdemU/b3LFkoQ
+BJJ8IvSsVD8hhBcVTkTxomWe44sKJ5puQSSbr4L6+/t5V1cXenp6oKqqq58xhpycHOTn5yMcDutk
+WYVSVZUrigJFUUzPSFYihEAURYiiCMbYn4HKltxemv0T/QbVH4vTlfX3FAAAAABJRU5ErkJggg==
+"
+       preserveAspectRatio="none"
+       height="35"
+       width="37" />
+    <text
+       id="text3767"
+       y="76.695732"
+       x="46.978748"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:Arial;-inkscape-font-specification:Arial;fill:#44aa00"
+         y="76.695732"
+         x="46.978748"
+         id="tspan3765"
+         sodipodi:role="line">+</tspan></text>
+  </g>
+</svg>

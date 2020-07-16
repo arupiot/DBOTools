@@ -1,6 +1,8 @@
 # YAML TO FAMILY DOCUMENT PARAMETERS
 
 import sys
+print(sys.version)
+print(sys.path)
 import clr
 import System
 import yaml
@@ -20,6 +22,7 @@ from Autodesk.Revit.UI import *
 from Autodesk.Revit import Creation
 
 from rpw.ui.forms import *
+
 
 def parameterName2ExternalDefinition(sharedParamFile, definitionName):
     """
