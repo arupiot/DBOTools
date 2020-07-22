@@ -1,4 +1,8 @@
+# YAML TO FAMILY DOCUMENT PARAMETERS
+
 import sys
+print(sys.version)
+print(sys.path)
 import clr
 import System
 import yaml
@@ -18,6 +22,7 @@ from Autodesk.Revit.UI import *
 from Autodesk.Revit import Creation
 
 from rpw.ui.forms import *
+
 
 def parameterName2ExternalDefinition(sharedParamFile, definitionName):
     """
@@ -44,7 +49,7 @@ def createnewgroup(shared_parameter_file, new_group_name):
                 if group.Name == new_group_name:
                     newgroup = group
         else:
-            print("Something went wrong. The group with name {} was not created".format(new_group_name))
+            print("Something went wrong. The group with name {} was not created. Please check Shared Parameter File is not read-only.".format(new_group_name))
             sys.exit("Script has ended")
     return newgroup
 
@@ -65,6 +70,7 @@ def create_definition (group, shared_parameter_file, param_name, param_type, use
         new_definition = group.Definitions.Create(ext_def_creation_options)
         print("Created external definition \"{}\" in group {}".format(new_definition.Name, group.Name))
 
+doc = __revit__.ActiveUIDocument.Document
 app = doc.Application
 pp = pprint.PrettyPrinter(indent=4)
 shared_param_file = app.OpenSharedParameterFile()
@@ -104,7 +110,7 @@ if doc.IsFamilyDocument:
                         ext_def = parameterName2ExternalDefinition(shared_param_file, param_name)
                         if ext_def != None:
                             doc.FamilyManager.AddParameter(ext_def, BuiltInParameterGroup.PG_IDENTITY_DATA, True)
-                            print("Parameter \"{}\" added to family".format(param_name))
+                            print("Parameter \"{}\" added to family as an Instance Parameter".format(param_name))
                         else:
                             print("Parameter \"{}\" is not in the Shared Parameter File".format(param_name))
                 t.Commit()

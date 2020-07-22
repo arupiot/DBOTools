@@ -1,7 +1,10 @@
-##Open excel file, create a list of the parameters and add them to the family as shared parameters
+# YAML TO SHARED PARAMETER FILE
 import sys
+print(sys.version)
+print(sys.path)
 import clr
 import System
+import rpw
 import yaml
 import pprint
 
@@ -57,6 +60,7 @@ def paramTypeName2ParamType (paramTypeName):
     else:
         return None
 
+doc = __revit__.ActiveUIDocument.Document
 app = doc.Application
 pp = pprint.PrettyPrinter(indent=4)
 shared_param_file = app.OpenSharedParameterFile()
@@ -84,6 +88,6 @@ else:
                 if new_group:
                     definition = create_definition(new_group, shared_param_file, param_name, param_type, user_modifiable, description)
             else:
-                print("Please check the parameter template has all information populated")
+                print("Please check that the yaml template has all information populated")
     else:
         print("Please specify a yaml file")
