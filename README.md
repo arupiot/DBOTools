@@ -47,6 +47,8 @@ pip install --target 'C:\\Users\\username\\AppData\\Roaming\\pyRevit-Master\\pyr
 
 ### Installation for pyRevit
 
+<img src="https://images.squarespace-cdn.com/content/v1/5605a932e4b0055d57211846/1579016738840-S4HNYZPL5U05TTOGFZSR/ke17ZwdGBToddI8pDm48kGUB6bvAQyL_fjdXd3nTTDBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpy1qOPYMCUmUox1BUDmVYF_KfvPNJdunqX1yE5UASPGwIGTVuQfUTrbnSl6yicKsPc/image-asset.png?format=750w" data-canonical-src="https://images.squarespace-cdn.com/content/v1/5605a932e4b0055d57211846/1579016738840-S4HNYZPL5U05TTOGFZSR/ke17ZwdGBToddI8pDm48kGUB6bvAQyL_fjdXd3nTTDBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpy1qOPYMCUmUox1BUDmVYF_KfvPNJdunqX1yE5UASPGwIGTVuQfUTrbnSl6yicKsPc/image-asset.png?format=750w" width="200" height="130" />
+
 * Install [pyRevit](https://github.com/eirannejad/pyRevit/releases). pyRevit uses IronPython to expose Revit methods to Python.
 
 * Add the GoogleTools tab to the Revit ribbon:
