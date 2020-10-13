@@ -41,6 +41,8 @@ pip install --target 'C:\\Users\\username\\AppData\\Roaming\\pyRevit-Master\\pyr
     C:\Users\username\AppData\Local\conda\conda\envs\py277\Lib\site-packages
     ```
     where `username` is your user name.
+Also add the library:
+    
 * Restart Revit
 * Go to Add-ins -> Interactive Python Shell
 * You should now be able to import the library requirements and execute the create_revit_families script

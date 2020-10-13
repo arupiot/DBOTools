@@ -198,9 +198,13 @@ if yaml_path:
     entity_type_name = rpw.ui.forms.SelectFromList(form_title,options,description=None,sort=True,exit_on_close=True)
 
     entity_type_dict = (dict(filter(lambda elem: elem [0] == entity_type_name, canonical_types.items())))
-    print("Printing selected entity type:")
-    #pp.pprint(entity_type_dict)
-    print(json.dumps(entity_type_dict, indent = 10))
+    # print("Printing selected entity type:")
+    # pp.pprint(entity_type_dict)
+
+    print("NO INDENT")
+    # pprint.pprint(entity_type_dict, width=1, sort_keys = True, compact=False)
+
+    print(json.dumps(entity_type_dict, indent = 4))
 
     implements = entity_type_dict[entity_type_name]["implements"]
     params_to_edit_names = []
@@ -210,8 +214,7 @@ if yaml_path:
     print(params_to_edit_names)
 
     print("The following instances will be modified according to Entity Type: {}".format(entity_type_name))
-    for family_instance in family_instances:
-        print(family_instance.Id.ToString())
+    pp.pprint(family_instances)
         
     warnings = []
     t = Transaction(doc, "Populate BOS parameters")
@@ -245,7 +248,6 @@ if yaml_path:
     t.Commit()
         
     print("Script has ended")
-    print("\n")
     if warnings == []:
         print("Warnings: None")
     else:

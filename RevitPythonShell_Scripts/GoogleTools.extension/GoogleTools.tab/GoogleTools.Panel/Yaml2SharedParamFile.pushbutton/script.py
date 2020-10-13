@@ -52,12 +52,14 @@ def create_definition (group, shared_parameter_file, param_name, param_type, use
 
 def paramTypeName2ParamType (paramTypeName):
     all_param_types = System.Enum.GetValues(ParameterType)
+    param_type_match = None
     for param_type in all_param_types:
         if param_type.ToString() == paramTypeName:
             param_type_match = param_type
     if param_type_match:
         return param_type_match
     else:
+        print("Parameter type not recognised: {}".format(param_type))
         return None
 
 doc = __revit__.ActiveUIDocument.Document
@@ -76,18 +78,33 @@ else:
 
         for param in parameters_yaml.items():
             param_name = param[0]
-            print(param_name)
+            print("Processing parameter {}...".format(param_name))
             group_name = param[1].get("GroupName")
             builtin_group = param[1].get("BuiltinGroup")
             param_type_name = param[1].get("ParameterType")
             param_type = paramTypeName2ParamType(param_type_name)
             user_modifiable = param[1].get("UserModifiable")
             description = param[1].get("Description")
-            if param_name and group_name and builtin_group and param_type and user_modifiable and description:
-                new_group = createnewgroup(shared_param_file,group_name)
-                if new_group:
-                    definition = create_definition(new_group, shared_param_file, param_name, param_type, user_modifiable, description)
+            if param_name:
+                if group_name:
+                    if builtin_group:
+                        if param_type:
+                            if user_modifiable:
+                                if description == None:
+                                    description = ""
+                                new_group = createnewgroup(shared_param_file,group_name)
+                                if new_group:
+                                    definition = create_definition(new_group, shared_param_file, param_name, param_type, user_modifiable, description)
+                                    print("Parameter {} created in shared parameter file.".format(param_name))
+                            else:
+                                print("Parameter not created. User modifiable missing in yaml file.")
+                        else:
+                            print("Parameter not created. Parameter type missing in yaml file.")
+                    else:
+                        print("Parameter not created. Built-in group missing in yaml file.")
+                else:
+                    print("Parameter not created. Group name missing in yaml file.")
             else:
-                print("Please check that the yaml template has all information populated")
+                print("Parameter not created. Parameter name missing in yaml file.")
     else:
         print("Please specify a yaml file")

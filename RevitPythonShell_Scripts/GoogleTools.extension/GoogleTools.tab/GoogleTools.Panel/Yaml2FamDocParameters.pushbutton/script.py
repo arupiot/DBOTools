@@ -1,8 +1,6 @@
 # YAML TO FAMILY DOCUMENT PARAMETERS
 
 import sys
-print(sys.version)
-print(sys.path)
 import clr
 import System
 import yaml
@@ -23,6 +21,8 @@ from Autodesk.Revit import Creation
 
 from rpw.ui.forms import *
 
+# print(sys.version)
+# print(sys.path)
 
 def parameterName2ExternalDefinition(sharedParamFile, definitionName):
     """
@@ -53,6 +53,19 @@ def createnewgroup(shared_parameter_file, new_group_name):
             sys.exit("Script has ended")
     return newgroup
 
+def builtinGroupFromName(builtin_group_name):
+    b_i_groups = System.Enum.GetValues(BuiltInParameterGroup)
+    builtin_group = None
+    for g in b_i_groups:
+        if g.ToString() == builtin_group_name:
+            builtin_group == g
+    
+    if builtin_group != None:
+        return builtin_group
+    else:
+        print("Built-in Group not valid: {}".format(builtin_group_name))
+        return None
+
 def create_definition (group, shared_parameter_file, param_name, param_type, usermodifiable, description):
     same_name = False
     new_definition = None
@@ -69,6 +82,7 @@ def create_definition (group, shared_parameter_file, param_name, param_type, use
         ext_def_creation_options.Description = description
         new_definition = group.Definitions.Create(ext_def_creation_options)
         print("Created external definition \"{}\" in group {}".format(new_definition.Name, group.Name))
+
 
 doc = __revit__.ActiveUIDocument.Document
 app = doc.Application

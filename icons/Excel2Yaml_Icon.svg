@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="92px"
+   height="92px"
+   viewBox="0 0 92 92"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Excel2Yaml_Icon.svg"
+   inkscape:export-filename="C:\Users\andrea.spanu\Documents\GitHub\create_revit_families\RevitPythonShell_Scripts\GoogleTools.extension\GoogleTools.tab\GoogleTools.Panel\Excel2Yaml.pushbutton\icon.png"
+   inkscape:export-xdpi="100.17391"
+   inkscape:export-ydpi="100.17391">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.935203"
+     inkscape:cx="-18.824796"
+     inkscape:cy="68.640953"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:grid-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-nodes="false"
+     inkscape:snap-text-baseline="true"
+     showguides="false" />
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="45.160156"
+       y="24.414062"
+       id="text25"><tspan
+         sodipodi:role="line"
+         x="45.160156"
+         y="24.414062"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0px;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;text-anchor:middle"
+         id="tspan30">XLSX</tspan></text>
+    <text
+       id="text57"
+       y="24.414062"
+       x="45.160156"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan55"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0px;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;text-anchor:middle"
+         y="24.414062"
+         x="45.160156"
+         sodipodi:role="line">XLSX</tspan></text>
+    <text
+       id="text57-1"
+       y="38.414062"
+       x="45.160156"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan55-6"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:0px;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;text-anchor:middle"
+         y="38.414062"
+         x="45.160156"
+         sodipodi:role="line">2</tspan></text>
+    <g
+       id="g65"
+       transform="matrix(0.16680475,0,0,0.16680475,46.922416,45.988484)">
+      <path
+         id="path45"
+         d="m 255.878,133.451 c 0,-10.734 -0.871,-18.567 -2.756,-26.69 H 130.55 v 48.448 h 71.947 c -1.45,12.04 -9.283,30.172 -26.69,42.356 l -0.244,1.622 38.755,30.023 2.685,0.268 c 24.659,-22.774 38.875,-56.282 38.875,-96.027"
+         inkscape:connector-curvature="0"
+         style="fill:#4285f4" />
+      <path
+         id="path47"
+         d="m 130.55,261.1 c 35.248,0 64.839,-11.605 86.453,-31.622 l -41.196,-31.913 c -11.024,7.688 -25.82,13.055 -45.257,13.055 -34.523,0 -63.824,-22.773 -74.269,-54.25 l -1.531,0.13 -40.298,31.187 -0.527,1.465 C 35.393,231.798 79.49,261.1 130.55,261.1"
+         inkscape:connector-curvature="0"
+         style="fill:#34a853" />
+      <path
+         id="path49"
+         d="m 56.281,156.37 c -2.756,-8.123 -4.351,-16.827 -4.351,-25.82 0,-8.994 1.595,-17.697 4.206,-25.82 L 56.063,103 15.26,71.312 13.925,71.947 C 5.077,89.644 0,109.517 0,130.55 c 0,21.033 5.077,40.905 13.925,58.602 L 56.281,156.37"
+         inkscape:connector-curvature="0"
+         style="fill:#fbbc05" />
+      <path
+         id="path51"
+         d="m 130.55,50.479 c 24.514,0 41.05,10.589 50.479,19.438 L 217.873,33.943 C 195.245,12.91 165.798,0 130.55,0 79.49,0 35.393,29.301 13.925,71.947 L 56.136,104.73 C 66.726,73.253 96.027,50.479 130.55,50.479"
+         inkscape:connector-curvature="0"
+         style="fill:#eb4335" />
+    </g>
+    <text
+       id="text57-0"
+       y="60.414062"
+       x="45.160156"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan55-0"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:0px;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;text-anchor:middle"
+         y="60.414062"
+         x="45.160156"
+         sodipodi:role="line">YAML</tspan></text>
+  </g>
+</svg>
