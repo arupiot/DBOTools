@@ -1,0 +1,100 @@
+﻿<Window x:Class="DBOTools.PopulateDBOFamilyParameterWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DBOTools"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800"
+             Title="Populate DBO Type Parameters"
+             SizeToContent="WidthAndHeight"
+             Background="White"
+             Topmost="True">
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch">
+
+            <Label Content="Select the families to edit them:"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="5"/>
+                </Grid.RowDefinitions>
+
+                
+                <ListView x:Name="FamiliesListBox"
+                 Grid.Column="0" Grid.Row="1"
+                 ItemsSource="{Binding DBOFamiliesList}"
+                 MaxHeight="450"
+                 ScrollViewer.VerticalScrollBarVisibility="Visible"
+                 SelectionChanged="FamiliesListBox_SelectionChanged"
+                 >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FullName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <StackPanel x:Name="familyInfoStackPanel"
+                            Grid.Column="2" Grid.Row="1">
+                    <TextBlock x:Name="typesTitle" Text="Selected Family: No selection"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Entity Type (DBOExportAs):"/>
+                        <ComboBox x:Name="entityTypeComboBox"
+                                  ItemsSource="{Binding EntityType.EntityTypes, Mode=TwoWay}"
+                                  Width="80">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+
+
+                        
+                    </StackPanel>
+                    <StackPanel x:Name="typesStackPanel"/>
+
+                </StackPanel>
+
+
+            </Grid>
+
+
+
+
+            <!--Buttons-->
+            <StackPanel Grid.Column="1" Grid.Row="13" Orientation="Horizontal" 
+                    VerticalAlignment="Center" HorizontalAlignment="Right">
+                <Button x:Name="cancelButton" 
+                    Content="Cancel" 
+                    Click="cancelButton_Click"
+                    Width="80" Height="30"
+                    Margin="5"/>
+                <Button x:Name="okButton"
+                    Content="OK"
+                    Click="okButton_Click"
+                    Width="80" Height="30"
+                    Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,135 @@
+﻿<Window x:Class="DBOTools.InjectParameters"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DBOTools"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400"
+             SizeToContent="WidthAndHeight"
+             Topmost="True"
+             Title="DBO Parameter Injection">
+    
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="LeftMargin" Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition x:Name="RightMargin" Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="TopMargin" Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition x:Name="BottomMargin" Height="20"/>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="parametersStackPanel">
+            <TextBlock Text="Parameters found in shared parameter file:" 
+                   HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1"
+                   Margin="0,5,0,5"/>
+            <CheckBox x:Name="dboExportAsCheckBox" Content="DBO Export As"
+                      IsChecked="{Binding Path=ExportAsDefinition, 
+                                          Mode=OneTime, 
+                                          TargetNullValue=false
+                                          }" 
+                      IsThreeState="False"
+                      Margin="5,0,0,0"/>
+            <CheckBox x:Name="dboImplementsCheckBox" Content="DBO Implements"
+                      IsChecked="{Binding Path=ImplementsDefinition, 
+                                          Mode=OneTime, 
+                                          TargetNullValue=false}" 
+                      IsThreeState="False"
+                      Margin="5,0,0,0"/>
+            <CheckBox x:Name="dboUsesCheckBox" Content="DBO Uses"
+                      IsChecked="{Binding Path=UsesDefinition, 
+                                          Mode=OneTime, 
+                                          TargetNullValue=false}" 
+                      IsThreeState="False"
+                      Margin="5,0,0,0"/>
+            
+            <TextBlock x:Name="warningTextBlock" TextWrapping="Wrap" Visibility="Collapsed" FontStyle="Italic">
+                Greyed out parameters are not available in the shared parameter file.
+            </TextBlock>
+        </StackPanel>
+
+        <TextBlock Text="Select the families to edit:"
+                   HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3"
+                   Margin="0,5,0,5"/>
+
+        <DataGrid ItemsSource="{Binding DBOFamilies}" 
+                  AutoGenerateColumns="False" 
+                  VerticalScrollBarVisibility="Visible"
+                  HorizontalAlignment="Stretch" 
+                  MaxHeight="450"
+                  CanUserSortColumns="False"
+                  CanUserResizeColumns="True"
+                  Grid.Column="1" Grid.Row="4" Margin="5">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected, 
+                                                  Mode=TwoWay, 
+                                                  UpdateSourceTrigger=PropertyChanged}"
+                                      IsThreeState="False"
+                                      Checked="FamilyChecked_Click"
+                                      Unchecked="FamilyUnchecked_Click">
+                            </CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTextColumn Header="Family" 
+                                    Binding="{Binding Family.FamilyCategory.Name, Mode=OneWay}" 
+                                    Width="auto" 
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Header="Family" 
+                                    Binding="{Binding Family.Name, Mode=OneWay}" 
+                                    Width="120"
+                                    IsReadOnly="True"
+                                    CanUserResize="True"/>
+                <DataGridCheckBoxColumn Header="DBO Export As"
+                                        Width="auto" 
+                                        IsReadOnly="True" 
+                                        Binding="{Binding HasExportAs, Mode=OneWay}"/>
+                <DataGridCheckBoxColumn Header="Implements"
+                                        Width="auto" 
+                                        IsReadOnly="True" 
+                                        Binding="{Binding HasImplements, Mode=OneWay}"/>
+                <DataGridCheckBoxColumn Header="DBO Uses"
+                                        Width="auto"
+                                        IsReadOnly="True" 
+                                        Binding="{Binding HasUses, Mode=OneWay}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal"  
+                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Grid.Column="1" Grid.Row="6">
+            <Button x:Name="cancelButton" Content="Close"
+                    Click="cancelButton_Click"
+                    Width="65" Height="25"
+                    Margin="5"/>
+            <Button x:Name="removeButton" Content="Remove"
+                    Click="removeButton_Click"
+                    Width="65" Height="25"
+                    Margin="5"/>
+            <Button x:Name="injectParametersButton" Content="Inject"
+                    Click="injectParametersButton_Click"
+                    Width="65" Height="25"
+                    Margin="5"/>
+        </StackPanel>
+
+    </Grid>
+
+</Window>

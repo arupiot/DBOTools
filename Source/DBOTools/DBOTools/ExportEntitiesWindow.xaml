@@ -1,0 +1,92 @@
+﻿<Window x:Class="DBOTools.ExportEntitiesWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DBOTools"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400"
+             SizeToContent="Width"
+             Topmost="True"
+             Title="DBO Entities Export">
+
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="LeftMargin" Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition x:Name="RightMargin" Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="TopMargin" Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition x:Name="BottomMargin" Height="20"/>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="parametersStackPanel">
+            <TextBlock Text="Select the General Types to export:" 
+                   HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1"
+                   Margin="0,5,0,5"/>
+            <DataGrid ItemsSource="{Binding AbbreviationsFound, Mode=OneTime}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="Export"/>
+                    <DataGridTextColumn Header="Abbreviation" Binding="{Binding}"/>
+                    <!--<DataGridTextColumn Header="Types" Binding="{Binding}"/>
+                    <DataGridTextColumn Header="Instances" Binding="{Binding}"/>-->
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+
+                <!--<DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="False" IsThreeState="False" 
+                                  Checked="SelectFamilyCheckBox_Checked"
+                                  Unchecked="SelectFamilyCheckBox_Unchecked">
+                            </CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+        <StackPanel Grid.Column="1" Grid.Row="3"
+                    Orientation="Vertical">
+            <RadioButton x:Name="namesFromIdRB"
+                         Content="Generate Instance Names from Id" 
+                         IsChecked="True" IsEnabled="True" GroupName="namingButtons"
+                         Click="NamesFromIdRB_Click"/>
+            <RadioButton Content="Read name from instance parameter" x:Name="NameFromParamRB"
+                         IsChecked="False" IsEnabled="True" GroupName="namingButtons"
+                         Click="NameFromParamRB_Click"/>
+            <Label Content="Select instance parameter:"/>
+            <ComboBox x:Name="instanceParametersCB" IsEnabled="{Binding NamesFromParameter}"
+                      ItemsSource="{Binding InstanceParameterNames, Mode=OneWay}" 
+                      SelectionChanged="instanceParametersCB_SelectionChanged">
+
+            </ComboBox>
+        </StackPanel>
+            
+        <StackPanel Orientation="Horizontal"  
+                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Grid.Column="1" Grid.Row="6">
+            <Button x:Name="cancelButton" Content="Cancel"
+                    Click="cancelButton_Click"
+                    Width="65" Height="25"
+                    Margin="5"/>
+            <Button x:Name="injectParametersButton" Content="Ok"
+                    Click="injectParametersButton_Click"
+                    Width="65" Height="25"
+                    Margin="5"/>
+        </StackPanel>
+
+    </Grid>
+
+</Window>

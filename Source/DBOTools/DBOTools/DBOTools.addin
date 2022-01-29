@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command DBOTools</Text>
+    <Description>Some description for DBOTools</Description>
+    <Assembly>DBOTools.dll</Assembly>
+    <FullClassName>DBOTools.Command</FullClassName>
+    <ClientId>b8c00631-8251-4586-9830-ec2620fa68e4</ClientId>
+    <VendorId></VendorId>
+    <VendorDescription></VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application DBOTools</Name>
+    <Assembly>DBOTools.dll</Assembly>
+    <FullClassName>DBOTools.App</FullClassName>
+    <ClientId>111bb50e-135a-45e4-9765-683254c3c2dc</ClientId>
+    <VendorId>Andrea</VendorId>
+    <VendorDescription>Andrea</VendorDescription>
+  </AddIn>
+</RevitAddIns>
