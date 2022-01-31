@@ -18,6 +18,7 @@ namespace DBOTools
         public DBOFamily DBOFamily { get; }
         public ElementId Id { get; }
         public string Name { get; }
+        public string FullName { get; }
 
         public bool IsValid { get; }
 
@@ -59,6 +60,8 @@ namespace DBOTools
             Uses = new List<string>() { };
 
             IsSelected = false;
+
+            FullName = $"{DBOFamily.FullName} - {Name}";
         }
 
         public DBOFamilyType(FamilySymbol familySymbol)
@@ -82,6 +85,8 @@ namespace DBOTools
             Uses = new List<string>() { };
 
             IsSelected = false;
+
+            FullName = $"{Family.FamilyCategory.Name} - {Family.Name} - {Name}";
         }
 
         private bool GetHasExportAs()

@@ -72,10 +72,10 @@ namespace DBOTools
             }
             else
             {
-                PopulateDBOfromBDNS populateDBOfromBDNS = new PopulateDBOfromBDNS(doc);
+                PopulateExportAsWindow populateExportAsWindow = new PopulateExportAsWindow(doc);
                 try
                 {
-                    populateDBOfromBDNS.Show();
+                    populateExportAsWindow.Show();
                 }
                 catch (Exception e)
                 {
@@ -108,11 +108,11 @@ namespace DBOTools
             }
             else
             {
-                PopulateDBOFamilyParameterWindow populateDBOFamilyParameterWindow =
-                    new PopulateDBOFamilyParameterWindow(doc);
+                PopulateTypeParametersWindow populateTypeParametersWindow =
+                    new PopulateTypeParametersWindow(doc);
                 try
                 {
-                    populateDBOFamilyParameterWindow.Show();
+                    populateTypeParametersWindow.Show();
                 }
                 catch (Exception e)
                 {
