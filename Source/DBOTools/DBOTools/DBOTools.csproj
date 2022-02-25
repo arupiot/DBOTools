@@ -43,9 +43,15 @@
     <Reference Include="Caliburn.Micro.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.Core.4.0.173\lib\netstandard2.0\Caliburn.Micro.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\source\repos\MyYamlTest\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="dotNetRDF, Version=2.7.2.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotNetRDF.2.7.2\lib\net40\dotNetRDF.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.34.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.34\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -58,14 +64,22 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VDS.Common, Version=1.10.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL">
+      <HintPath>..\packages\VDS.Common.1.10.0\lib\net40-client\VDS.Common.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="YamlDotNet">
       <HintPath>..\..\..\..\..\..\source\repos\MyYamlTest\packages\YamlDotNet.11.2.1\lib\net45\YamlDotNet.dll</HintPath>
@@ -73,50 +87,58 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="ButtonsPanelsIcons.cs" />
     <Compile Include="Commands\ExtEvent_InjectParameters.cs" />
     <Compile Include="Commands\ExtEvent_PopulateExportAs.cs" />
     <Compile Include="Commands\ExtEvent_PopulateTypeParameters.cs" />
     <Compile Include="Commands\ExtEvent_RemoveParameters.cs" />
-    <Compile Include="DBOFamilyInstance.cs" />
-    <Compile Include="DBOFamilyType.cs" />
+    <Compile Include="DBOClasses\DBOFamilyInstance.cs" />
+    <Compile Include="DBOClasses\DBOFamilyType.cs" />
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="DBOEntity.cs" />
-    <Compile Include="DBOFamily.cs" />
-    <Compile Include="DBOParameters.cs" />
-    <Compile Include="ExportEntitiesWindow.xaml.cs">
+    <Compile Include="DBOClasses\DBOEntity.cs" />
+    <Compile Include="DBOClasses\DBOFamily.cs" />
+    <Compile Include="DBOClasses\DBOParameters.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WPFWindows\ExportEntitiesWindow.xaml.cs">
       <DependentUpon>ExportEntitiesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers.cs" />
     <Compile Include="HVAC.cs" />
-    <Compile Include="InjectParameters.xaml.cs">
+    <Compile Include="WPFWindows\InjectParameters.xaml.cs">
       <DependentUpon>InjectParameters.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopulateExportAsWindow.xaml.cs">
+    <Compile Include="WPFWindows\PopulateExportAsWindow.xaml.cs">
       <DependentUpon>PopulateExportAsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopulateTypeParametersWindow.xaml.cs">
-      <DependentUpon>PopulateTypeParametersWindow.xaml</DependentUpon>
+    <Compile Include="WPFWindows\DBOEditTypesWindow.xaml.cs">
+      <DependentUpon>DBOEditTypesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Variables.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DBOTools.addin" />
+    <None Include="Icons\PlaceholderIcon32x32.ico" />
+    <None Include="Icons\PlaceholderIcon16x16.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ExportEntitiesWindow.xaml">
+    <Page Include="WPFWindows\ExportEntitiesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InjectParameters.xaml">
+    <Page Include="WPFWindows\InjectParameters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopulateExportAsWindow.xaml">
+    <Page Include="WPFWindows\PopulateExportAsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopulateTypeParametersWindow.xaml">
+    <Page Include="WPFWindows\DBOEditTypesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,10 +146,19 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if exist "$(SolutionDir)\ADDIN FILES" copy "$(ProjectDir)*.addin" "$(SolutionDir)\ADDIN FILES"
+if exist "$(SolutionDir)\ADDIN FILES" copy "$(ProjectDir)$(OutputPath)*.dll" "$(SolutionDir)\ADDIN FILES"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

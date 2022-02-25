@@ -1,6 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Text;
 using System.Threading.Tasks;
 using Autodesk.Revit.ApplicationServices;
@@ -9,6 +13,8 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Mechanical;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
+using System.Windows.Controls;
+
 
 namespace DBOTools
 {
@@ -90,6 +96,75 @@ namespace DBOTools
         {
             return EntityType.EntityTypes.Where(x => x.Name == name).FirstOrDefault();
         }
+
+        public static PushButton CreatePushButton(
+            _Button _button, 
+            RibbonPanel ribbonPanel, 
+            bool enableButton)
+        {
+            // To create new buttons check the _Button class
+
+            PushButtonData pushButtonData = new PushButtonData(
+                _button.Name,
+                _button.Text,
+                Assembly.GetExecutingAssembly().Location,
+                _button.AssociatedCommand)
+            {
+                ToolTip = _button.ToolTip,
+                LongDescription = _button.LongDescription,
+                Image = _button.IconSmall,
+                LargeImage = _button.IconLarge
+            };
+
+            PushButton pushButton = ribbonPanel.AddItem(pushButtonData)
+                as PushButton;
+
+            pushButton.Enabled = enableButton;
+
+            return pushButton;
+        }
+
+        public static RibbonPanel CreateRibbonPanel(
+            UIControlledApplication a,
+            string panelName)
+        {
+            RibbonPanel newPanel = a.GetRibbonPanels(
+                Constants.ribbonTabName)
+                .Where(x => x.Name == panelName)
+                .FirstOrDefault();
+
+            if (newPanel == null)
+            {
+                newPanel = a.CreateRibbonPanel(Constants.ribbonTabName, panelName);
+            }
+
+            return newPanel;
+        }
+
+        /*
+        public static BitmapSource GetBitmapSource(Image img)
+        {
+            BitmapImage bmp = new BitmapImage();
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, ImageFormat.Png);
+                ms.Position = 0;
+
+                bmp.BeginInit();
+
+                bmp.CacheOption = BitmapCacheOption.OnLoad;
+                bmp.UriSource = null;
+                bmp.StreamSource = ms;
+
+                bmp.EndInit();
+
+            }
+
+            return bmp;
+        }
+        */
+
 
         Result IExternalCommand.Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-41484453762
+41938000751
 11867390625
-20450298081
-16335812538
-ExportEntitiesWindow.xaml;InjectParameters.xaml;PopulateExportAsWindow.xaml;PopulateTypeParametersWindow.xaml;
+22616855467
+25758194199
+WPFWindows\ExportEntitiesWindow.xaml;WPFWindows\InjectParameters.xaml;WPFWindows\PopulateExportAsWindow.xaml;WPFWindows\DBOEditTypesWindow.xaml;
 
-True
+False
 

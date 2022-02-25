@@ -89,7 +89,7 @@ namespace DBOTools
     }
 
     [Transaction(TransactionMode.Manual)]
-    public class PopulateDBOTypeParametersShowDialog : IExternalCommand
+    public class DisplayDBOEditTypes : IExternalCommand
     {
         public Result Execute(
           ExternalCommandData commandData,
@@ -108,11 +108,11 @@ namespace DBOTools
             }
             else
             {
-                PopulateTypeParametersWindow populateTypeParametersWindow =
-                    new PopulateTypeParametersWindow(doc);
+                DBOEditTypesWindow dboEditTypesWindow =
+                    new DBOEditTypesWindow(doc);
                 try
                 {
-                    populateTypeParametersWindow.Show();
+                    dboEditTypesWindow.Show();
                 }
                 catch (Exception e)
                 {
@@ -329,6 +329,52 @@ namespace DBOTools
                 }
 
             }
+
+            return Result.Succeeded;
+        }
+    }
+
+    [Transaction(TransactionMode.Manual)]
+    public class WIP : IExternalCommand
+    {
+        public Result Execute(
+          ExternalCommandData commandData,
+          ref string message,
+          ElementSet elements)
+        {
+            UIApplication uiapp = commandData.Application;
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+            Autodesk.Revit.ApplicationServices.Application app = uiapp.Application;
+            Document doc = uidoc.Document;
+            //Selection sel = uidoc.Selection;
+
+            MessageBox.Show("This command is currently WIP");
+
+            return Result.Succeeded;
+        }
+    }
+
+    [Transaction(TransactionMode.Manual)]
+    public class Info : IExternalCommand
+    {
+        public Result Execute(
+          ExternalCommandData commandData,
+          ref string message,
+          ElementSet elements)
+        {
+            UIApplication uiapp = commandData.Application;
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+            Autodesk.Revit.ApplicationServices.Application app = uiapp.Application;
+            Document doc = uidoc.Document;
+            //Selection sel = uidoc.Selection;
+
+            string infoMessage = "DBO Tools" +
+                $"\nDescription WIP" +
+                $"\n{Constants.infoLicence}" +
+                $"\n{Constants.infoContacts}";
+
+
+            MessageBox.Show(infoMessage);
 
             return Result.Succeeded;
         }

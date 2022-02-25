@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace DBOTools
 {
-    public class Variables
+    public class Constants
     {
-        //public static List<string> ExcludedCategories = new List<string>
+        public const string ribbonTabName = "DBO Tools";
+
+        public const string infoContacts = "Contacts TBC";
+        public const string infoLicence = "Licence TBC";
+
+
+        //public const List<string> ExcludedCategories = new List<string>
         //{
         //"Cable Tray Fittings",
         //"Cable Tray Tags",
@@ -49,11 +55,8 @@ namespace DBOTools
         //};
 
 
-        List<string> AllCategories = new List<string>
+        public static readonly List<string> AllCategories = new List<string>
         {
-        "1535_00_KRO_2_TW_G_O4_0106_A_20200122.dwg",
-        "1535_00_KRO_2_TW_G_O5_0107_A_20200122.dwg",
-        "1535_00_KRO_2_TW_G_U1_0101_A_20200122.dwg",
         "Adaptive Points",
         "Air Systems",
         "Air Terminal Tags",
@@ -365,18 +368,9 @@ namespace DBOTools
         "Wires",
         "Zone Equipment",
         "Zone Tags",
-        "h_4240_clean.dwg",
-        "h_4250_clean.dwg",
-        "h_4260_clean.dwg",
-        "h_4270_clean.dwg",
-        "hl_4220_clean.dwg",
-        "hl_4230_clean.dwg",
-        "l_501_KG_clear.dwg",
-        "l_507_5OG.dwg",
         };
 
-
-        public static List<string> IncludedCategories = new List<string>
+        public static readonly List<string> IncludedCategories = new List<string>
         {
         "Air Terminals",
         "Assemblies",

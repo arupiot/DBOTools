@@ -66,7 +66,7 @@ namespace DBOTools
                 WhereElementIsNotElementType().
                 Cast<Family>().
                 Where(x => 
-                    Variables.IncludedCategories.Contains(x.FamilyCategory.Name) == true
+                    Constants.IncludedCategories.Contains(x.FamilyCategory.Name) == true
                     && x.GetFamilySymbolIds().Count >0).
                 ToList().
                 OrderBy(family => family.FamilyCategory.Name).
